@@ -185,7 +185,7 @@
         <div class="max-w-[760px] mx-auto px-6 h-16 flex items-center justify-between">
             <a href="#" onclick="showSection('home'); return false;" class="group flex items-center gap-3">
                 <div class="relative w-9 h-9 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-500 p-[2px] shadow-sm group-hover:scale-105 transition-transform">
-                    <img src="https://plus.unsplash.com/premium_photo-1786053311365-906c9d848ed3?q=80&w=697&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D" 
+                    <img src="https://raw.githubusercontent.com/deardaddypig/me/refs/heads/main/me.jpg" 
                          onerror="this.src='https://placehold.co/100x100/6366f1/ffffff?text=AC'" 
                          alt="Relax Shing" class="w-full h-full object-cover rounded-full">
                 </div>
@@ -239,19 +239,21 @@
                 </div>
 
                 <!-- Interactive Now Playing / Status Bento -->
-                <div class="glass-panel p-5 rounded-3xl flex flex-col justify-between space-y-3 relative">
-                    <div class="flex items-center justify-between text-xs text-slate-400">
-                        <span class="font-mono text-[10px] tracking-widest uppercase">Currently Listening</span>
-                        <i class="fa-solid fa-compact-disc text-purple-500 animate-spin" style="animation-duration: 8s;"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <p class="text-xs font-bold text-slate-800 dark:text-slate-200 truncate">Ludovico Einaudi — Experience</p>
-                        <p class="text-[11px] text-slate-400 dark:text-slate-500">Neo-Classical / Focus Mode</p>
-                    </div>
-                    <div class="w-full bg-slate-200 dark:bg-slate-800 h-1 rounded-full overflow-hidden">
-                        <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full w-2/3"></div>
-                    </div>
-                </div>
+<div class="now-playing" style="flex-direction: column; align-items: flex-start; gap: 8px;">
+  <div style="display: flex; align-items: center; gap: 10px; width: 100%;">
+    <div class="disc-spin">💿</div>
+    <div>
+      <div style="font-size: 0.85rem; font-weight: 600;"> Easy on me</div>
+      <div style="font-size: 0.75rem; opacity: 0.6;">歌手 — Adele</div>
+    </div>
+  </div>
+
+  <!-- 真實播放器選單 (播放、暫停、進度條) -->
+  <audio controls style="width: 100%; height: 32px; margin-top: 4px;">
+    <source src="https://github.com/deardaddypig/me/raw/refs/heads/main/Adele-EasyOnMe.mp3" type="audio/mpeg">
+    你的瀏覽器不支援音訊播放。
+  </audio>
+</div>
             </section>
 
             <!-- Quick Category Filter Chips -->
@@ -325,7 +327,7 @@
 
                 <div class="flex items-center gap-4 text-xs text-slate-400">
                     <span>分享文章:</span>
-                    <button onclick="shareArticle('twitter')" class="p-2.5 rounded-full glass-panel hover:text-purple-500 transition-colors"><i class="fa-brands fa-x-twitter"></i></button>
+                
                     <button onclick="shareArticle('copy')" class="p-2.5 rounded-full glass-panel hover:text-purple-500 transition-colors"><i class="fa-solid fa-link"></i></button>
                 </div>
             </div>
@@ -334,7 +336,7 @@
         <!-- ================= MICRO-THOUGHTS / STATUS FEED ================= -->
         <div id="view-thoughts" class="hidden space-y-8">
             <header class="space-y-2">
-                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">微光隨筆 (Micro-Thoughts)</h1>
+                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">隨筆 (Micro-Thoughts)</h1>
                 <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">不構成完整文章的廢話、靈感火花與日常隨筆。</p>
             </header>
 
@@ -377,12 +379,10 @@
                 <div class="glass-panel p-6 rounded-3xl space-y-3 flex flex-col justify-center">
                     <h3 class="text-xs font-mono uppercase text-slate-400 tracking-wider">Tech Stack</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">React / Next.js</span>
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">TypeScript</span>
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">Tailwind CSS</span>
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">Node.js</span>
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">GraphQL</span>
-                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">Three.js</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">Myself</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">Blog</span>
+                        <span class="px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-xs font-medium">...</span>
+  
                     </div>
                 </div>
             </div>
@@ -391,7 +391,7 @@
             <div class="glass-panel p-6 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="space-y-1 text-center sm:text-left">
                     <h3 class="text-base font-bold text-slate-900 dark:text-white">想聊聊天或合作？</h3>
-                    <p class="text-xs text-slate-500 dark:text-slate-400">隨時歡迎寄信給我，我會在 24 小時內回覆。</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">歡迎寄信給我，我會在 24 小時內回覆。</p>
                 </div>
                 <a href="mailto:email@relaxshing.com" class="px-5 py-2.5 rounded-full bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-xs font-medium hover:scale-105 transition-transform">
                     email@relaxshing.com
@@ -407,7 +407,8 @@
             <p>© 2026 Relax Shing. Designed with restraint and love.</p>
             <div class="flex items-center gap-4">
                 <a href="https://github.com" target="_blank" class="hover:text-purple-500 transition-colors"><i class="fa-brands fa-github text-sm"></i></a>
-                <a href="https://twitter.com" target="_blank" class="hover:text-purple-500 transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                
+            
                 <button onclick="scrollToTop()" class="hover:text-purple-500 transition-colors flex items-center gap-1 font-mono">
                     TOP <i class="fa-solid fa-arrow-up text-[10px]"></i>
                 </button>
@@ -447,26 +448,26 @@
         const postsData = [
             {
                 id: 'aesthetic-restraint',
-                title: '極簡主義克制美學：當我們不再充填每一個像素',
+                title: '極簡主義美學：當我們回味每一個像素',
                 date: '2026-10-18',
                 category: '設計',
                 readTime: '1 MIN READ',
-                excerpt: '在資訊爆炸與視覺過載的時代，真正的奢華是「留白」。本文探討如何在數位產品中運用克制的美學與層次感。',
+                excerpt: '在資訊爆炸與視覺過載的時代，真正的奢華是「留白」。如何在數位產品中運用美學與層次感。',
                 applause: 88,
                 content: `
-                    <p>當我們回顧 2000 年代初期的網頁設計，往往充滿了滿溢的圖示、閃爍的霓虹動畫與繁複的邊框。然而，隨著視覺審美的成熟，我們意識到<strong>「簡約（Minimalism）」並不等於「空洞」</strong>，而是一種極致的克制。</p>
+                    <p>當我們回顧 2000 年代初期的網頁設計，往往充滿了滿溢的圖示、閃爍的霓虹動畫與繁複的邊框。然而，隨著視覺審美的成熟，我們意識到<strong>「簡約」並不等於「空洞」</strong>，而是一種極致的美學。</p>
 
                     <h2>1. 留白作為一種引導視線的聲音</h2>
-                    <p>留白（Negative Space）不是設計剩下來的殘渣，它是設計的主體本身。恰當的留白能夠賦予文字呼吸的能力，讓讀者在閱讀時保持專注與平靜。</p>
+                    <p>留白不是設計剩下來的殘渣，它是設計的主體。恰當的留白能夠賦予文字呼吸的能力，讀者在閱讀時保持專注與平靜。</p>
 
                     <blockquote class="my-6">
-                        「設計不在於增加到不能再增加，而在於減少到不能再減少。」—— 聖修伯里
+                        「設計不在於增加到不能再增加，而在於減少到不能再減少。」
                     </blockquote>
 
                     <h2>2. 微光與質感的細節堆疊</h2>
-                    <p>現代極簡風格不再是冷冰冰的純白與純黑。透過微妙的模糊玻璃態（Glassmorphism）、毛玻璃邊框以及柔和的背景漸變，能夠在保持極簡的同時，賦予介面極高的視覺深度。</p>
+                    <p>現代極簡風格不再是冷冰冰的純白與純黑。透過微妙的模糊玻璃感、柔和的背景漸變，能夠在保持極簡的同時，賦予介面極高的視覺印象。</p>
 
-                    <p>試著在你的 CSS 專案中加入以下陰影與模糊邏輯：</p>
+                    <p>下次試試在你的設計中加入以下陰影與模糊邏輯：</p>
 
                     <div class="relative group my-4">
                         <button onclick="copyCode(this)" class="absolute right-3 top-3 px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
@@ -481,22 +482,22 @@
                     </div>
 
                     <h2>3. 結語</h2>
-                    <p>去掉所有無意義的炫技，讓文字與思想重回舞台中央。這不僅是網頁設計的哲學，也是數位生活的一種態度。</p>
+                    <p>Delete 所有無意義的，讓文字與思想重回舞台中。這不僅是網頁設計的學問，也是數位生活的一種態度。</p>
                 `
             },
             {
                 id: 'frontend-architecture-2026',
-                title: '2026 前端架構再思考：邁向無感載入與零重構',
-                date: '2026-09-30',
+                title: '2026 架構再思考：邁向無感載入與零重構',
+                date: '2026-09-27',
                 category: '工程',
-                readTime: '6 MIN READ',
-                excerpt: '探討 Web Components, Edge Rendering 以及原生 CSS 現代特性如何重塑我們對單頁應用程式（SPA）的認知。',
+                readTime: '1 MIN READ',
+                excerpt: '探討 Web Components, Rendering 以及原生 CSS 現代特性如何重塑我們對單頁應用程式的認知。',
                 applause: 142,
                 content: `
-                    <p>隨著瀏覽器引擎效能的大幅躍進，過去許多依賴重型 JavaScript 框架才能實現的功能，如今都能以原生 Web API 優雅完成。</p>
+                    <p>隨著瀏覽器效能的大幅躍進，過去許多依賴重型 JavaScript 框架才能實現的功能，如今都能以原生 Web API 完成。</p>
 
                     <h2>1. 原生特性的崛起</h2>
-                    <p>原生 CSS 嵌套、View Transitions API 以及 Container Queries 的全面普及，使得我們能以更少的代码實現更加流暢的頁面切換與響應式排版。</p>
+                    <p>原生 CSS 嵌套、API 的全面普及，使我們能以更少的 Code 實現更加流暢的頁面切換與排版。</p>
 
                     <div class="my-6 my-image-box">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
@@ -507,28 +508,28 @@
                     </div>
 
                     <h2>2. 無感載入與狀態管理簡化</h2>
-                    <p>減少不必要的全局狀態管理，善用 URL 狀態與瀏覽器原生快取，是保持前端專案輕量化的關鍵秘密。</p>
+                    <p>減少不必要的管理，善用 URL 狀態與瀏覽器快取，是保持輕量化的關鍵。</p>
                 `
             },
             {
                 id: 'digital-detox-notes',
-                title: '數位減毒日誌：重新掌控專注力的 30 天實驗',
-                date: '2026-08-14',
+                title: '數位日誌：重新掌控專注力的實驗',
+                date: '2026-10-14',
                 category: '隨筆',
-                readTime: '5 MIN READ',
-                excerpt: '在演算法與短影音不斷侵蝕大腦的年代，如何建立個人的資訊飲食（Information Diet）與深層創作狀態。',
+                readTime: '1 MIN READ',
+                excerpt: '在演算法與短影音不斷侵蝕大腦年代，如何建立個人的資訊（Information Diet）與深層創作狀態。',
                 applause: 96,
                 content: `
-                    <p>大腦就像我們的胃，你餵給它什麼資訊，它就會產出什麼樣的思考。過去一個月，我嘗試切斷所有即時社群媒體的推播。</p>
+                    <p>大腦就像我們的胃，你餵給它什麼資訊，它就會產出什麼樣的思考。底者應該嘗試切斷所有即時社群媒體的 notification。</p>
 
-                    <h2>資訊飲食的三個法則</h2>
+                    <h2>三個法則</h2>
                     <ul>
                         <li><strong>非同步溝通優先：</strong> 關閉非緊急通訊軟體的即時通知。</li>
-                        <li><strong>Block & Batch：</strong> 每日集中兩次處理郵件與訊息，其餘時間全力投入深度工作（Deep Work）。</li>
-                        <li><strong>紙筆思維：</strong> 複雜的架構設計先在實體筆記本上草繪。</li>
+                        <li><strong>Block & Batch：</strong> 每日集中兩次處理郵件與訊息，其餘時間全力投入工作（Deep Work）。</li>
+                        <li><strong>紙筆思維：</strong> 複雜的架構設計先在筆記本上草稿。</li>
                     </ul>
 
-                    <blockquote>專注力是 21 世紀最稀缺的資源。保護你的注意力，就像保護你的資產一樣。</blockquote>
+                    <blockquote>專注力是這年代最稀缺的資源。一齊試試保護自己的注意力。</blockquote>
                 `
             }
         ];
@@ -537,13 +538,13 @@
         const thoughtsData = [
             {
                 date: '2026-10-20 22:15',
-                content: '今晚在聽 Ludovico Einaudi 的鋼琴曲時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
+                content: '今晚在聽 Adele 的歌時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
                 tag: '靈感'
             },
             {
-                date: '2026-10-12 14:30',
-                content: '把網頁上的 Hover 效果延遲調整了 50ms，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是產品的靈魂所在。',
-                tag: 'UI/UX'
+                date: '2026-10-16 14:30',
+                content: '把網頁上的效果延遲調整了，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是靈魂所在。',
+                tag: 'UI'
             },
             {
                 date: '2026-09-25 09:10',
@@ -554,26 +555,40 @@
 
         // Projects Data
         const projectsData = [
-            {
-                title: 'Aura Reader',
-                desc: '專為閱讀愛好者打造的無干擾沉浸式 Markdown 閱讀器。',
-                tech: ['React', 'Tailwind CSS', 'TypeScript'],
+             {
+                title: 'Foodie Hunter',
+                desc: '第一次嘗試結合 Map 及GPS 功能的尋找美食程式。(完成度：??%)',
+                tech: ['foodie', 'map', 'game'],
                 stars: 340,
-                link: '#'
+                link: 'https://deardaddypig.github.io/foodie/'
+            },
+             {
+                title: '包剪揼',
+                desc: '「呈尋磨較叉燒包」',
+                tech: ['tictactoe', 'game'],
+                stars: 340,
+                link: 'https://deardaddypig.github.io/TicTacToe/'
             },
             {
-                title: 'ZenPalette Generator',
-                desc: '根據莫蘭迪色系與低飽和美學自動產生優雅網頁調色盤的線上工具。',
-                tech: ['Vue 3', 'Canvas API'],
+                title: '2042',
+                desc: '專為飛機愛好者打造。(正研發 online 雙人合作 mode)',
+                tech: ['shooting', 'airplane', 'game'],
+                stars: 340,
+                link: 'https://deardaddypig.github.io/2042/'
+            },
+            {
+                title: '過馬路 要小心',
+                desc: '根據小孩上學時，遇上早上繁忙交通，及兒時經典 game 所設計。',
+                tech: ['traffic road', 'game'],
                 stars: 215,
-                link: '#'
+                link: 'https://deardaddypig.github.io/traffic/'
             },
             {
-                title: 'Minimalist Blog Engine',
-                desc: '靈感來自極輕量化單頁個人網誌模板。',
-                tech: ['Vanilla JS', 'Tailwind CSS'],
+                title: '釣魚物語',
+                desc: '靈感來自細個玩的釣魚game，加上簡單輕量化商店模板。',
+                tech: ['fishing', 'game'],
                 stars: 512,
-                link: '#'
+                link: 'https://deardaddypig.github.io/fisherman/'
             }
         ];
 
