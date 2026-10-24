@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relax Shing — Thought Space & Digital Things</title>
 
+    <!-- SEO & Social Share (WhatsApp / Facebook / Telegram / X) -->
+    <!-- ⚠️ 上線後請將下面 SITE_URL 嘅網址換成你真正網址（要用絕對路徑 https://...） -->
+    <meta name="description" content="輕鬆誠 (Relax Shing) 嘅個人空間：軟體架構師、極簡產品創作者。收錄小遊戲專案、設計與工程文章、隨筆。">
+    <meta name="author" content="Relax Shing">
+    <meta name="theme-color" content="#8b5cf6">
+    <link rel="canonical" href="https://deardaddypig.github.io/me/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Relax Shing">
+    <meta property="og:locale" content="zh_HK">
+    <meta property="og:title" content="Relax Shing — 輕鬆誠嘅思想空間">
+    <meta property="og:description" content="小遊戲專案、設計與工程文章、日常隨筆。歡迎入嚟玩下 🎮">
+    <meta property="og:url" content="https://deardaddypig.github.io/me/">
+    <meta property="og:image" content="https://raw.githubusercontent.com/deardaddypig/me/refs/heads/main/me.jpg">
+    <meta property="og:image:alt" content="Relax Shing">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Relax Shing — 輕鬆誠嘅思想空間">
+    <meta name="twitter:description" content="小遊戲專案、設計與工程文章、日常隨筆。">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/deardaddypig/me/refs/heads/main/me.jpg">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -103,6 +124,44 @@
             box-shadow: 0 12px 30px -10px rgba(139, 92, 246, 0.15);
         }
 
+        /* Now Playing Card */
+        .now-playing {
+            display: flex;
+            padding: 0.9rem 1rem;
+            border-radius: 1.5rem;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(229, 231, 235, 0.6);
+            color: #1e293b;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .now-playing:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 12px 30px -10px rgba(139, 92, 246, 0.15);
+        }
+        .dark .now-playing {
+            background: rgba(15, 23, 42, 0.55);
+            border-color: rgba(255, 255, 255, 0.08);
+            color: #f1f5f9;
+        }
+        .disc-spin {
+            font-size: 1.6rem;
+            line-height: 1;
+            animation: disc-rotate 6s linear infinite;
+        }
+        .now-playing:not(:hover) .disc-spin { animation-play-state: paused; }
+        @keyframes disc-rotate { to { transform: rotate(360deg); } }
+        .now-playing audio {
+            border-radius: 9999px;
+            color-scheme: light;
+            accent-color: #8b5cf6;
+        }
+        .dark .now-playing audio { color-scheme: dark; }
+        @media (prefers-reduced-motion: reduce) {
+            .disc-spin { animation: none; }
+        }
+
         /* Article Drop Cap & Typography */
         .article-body {
             font-family: 'Inter', 'Noto Serif TC', serif;
@@ -183,7 +242,7 @@
     <!-- Top Navigation Header -->
     <header class="sticky top-0 z-40 w-full backdrop-blur-md bg-slate-50/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50 transition-all">
         <div class="max-w-[760px] mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" onclick="showSection('home'); return false;" class="group flex items-center gap-3">
+            <a href="#" onclick="showSection('projects'); return false;" class="group flex items-center gap-3">
                 <div class="relative w-9 h-9 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-500 p-[2px] shadow-sm group-hover:scale-105 transition-transform">
                     <img src="https://raw.githubusercontent.com/deardaddypig/me/refs/heads/main/me.jpg" 
                          onerror="this.src='https://placehold.co/100x100/6366f1/ffffff?text=AC'" 
@@ -197,9 +256,9 @@
 
             <!-- Navigation Links -->
             <nav class="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium">
-                <button id="nav-home" onclick="showSection('home')" class="nav-btn px-3 py-1.5 rounded-full text-slate-900 dark:text-white font-semibold bg-slate-200/60 dark:bg-slate-800/60 transition-all">文章</button>
+                <button id="nav-projects" onclick="showSection('projects')" class="nav-btn px-3 py-1.5 rounded-full text-slate-900 dark:text-white font-semibold bg-slate-200/60 dark:bg-slate-800/60 transition-all">專案</button>
+                <button id="nav-home" onclick="showSection('home')" class="nav-btn px-3 py-1.5 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">文章</button>
                 <button id="nav-thoughts" onclick="showSection('thoughts')" class="nav-btn px-3 py-1.5 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">微光隨筆</button>
-                <button id="nav-projects" onclick="showSection('projects')" class="nav-btn px-3 py-1.5 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">專案</button>
                 <button id="nav-about" onclick="showSection('about')" class="nav-btn px-3 py-1.5 rounded-full text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all">關於</button>
 
                 <div class="h-4 w-[1px] bg-slate-300 dark:bg-slate-800 mx-1"></div>
@@ -221,7 +280,7 @@
     <main class="max-w-[760px] w-full mx-auto px-6 py-10 flex-grow z-10 relative">
 
         <!-- ================= HOME SECTION (BLOG LIST) ================= -->
-        <div id="view-home" class="space-y-10">
+        <div id="view-home" class="hidden space-y-10">
 
             <!-- Hero Bento Box Intro -->
             <section class="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -346,10 +405,10 @@
         </div>
 
         <!-- ================= PROJECTS SECTION ================= -->
-        <div id="view-projects" class="hidden space-y-8">
+        <div id="view-projects" class="space-y-8">
             <header class="space-y-2">
                 <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">專案與作品集 (Projects)</h1>
-                <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">開源工具、設計實驗與個人作品。</p>
+                <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">開源工具、設計實驗與個人作品。點擊預覽圖即可直接試玩。</p>
             </header>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="projects-container">
@@ -360,7 +419,7 @@
         <!-- ================= ABOUT SECTION ================= -->
         <div id="view-about" class="hidden space-y-8">
             <header class="space-y-2">
-                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">關於我 (About)</h1>
+                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">關於我 (About me)</h1>
                 <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">工程師的邏輯，一時一樣的情懷。</p>
             </header>
 
@@ -618,6 +677,10 @@
             renderProjects();
             setupReadingProgress();
 
+            // Hash routing：載入時依網址顯示，之後跟住上一頁/下一頁
+            handleRoute();
+            window.addEventListener('hashchange', handleRoute);
+
             // Keyboard Shortcuts (Cmd+K)
             window.addEventListener('keydown', (e) => {
                 if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
@@ -655,7 +718,7 @@
         }
 
         // SPA Navigation Manager
-        function showSection(sectionId) {
+        function renderSection(sectionId) {
             const sections = ['home', 'article', 'thoughts', 'projects', 'about'];
             sections.forEach(s => {
                 const el = document.getElementById(`view-${s}`);
@@ -687,6 +750,39 @@
             }
 
             scrollToTop();
+        }
+
+        // ===== Hash Router =====
+        // #projects  #articles  #thoughts  #about  #post-<文章id>
+        const SECTION_HASH = { home: 'articles', projects: 'projects', thoughts: 'thoughts', about: 'about' };
+        const HASH_SECTION = { articles: 'home', projects: 'projects', thoughts: 'thoughts', about: 'about' };
+        const SECTION_TITLE = { home: '文章', projects: '專案', thoughts: '微光隨筆', about: '關於' };
+        const BASE_TITLE = 'Relax Shing';
+
+        function showSection(sectionId) {
+            const hash = SECTION_HASH[sectionId] || 'projects';
+            if (location.hash === '#' + hash) {
+                renderSection(sectionId);
+                document.title = `${SECTION_TITLE[sectionId]} — ${BASE_TITLE}`;
+            } else {
+                location.hash = hash; // 會觸發 hashchange → handleRoute
+            }
+        }
+
+        function handleRoute() {
+            const hash = decodeURIComponent(location.hash.replace(/^#/, ''));
+
+            if (hash.startsWith('post-')) {
+                const id = hash.slice(5);
+                if (postsData.some(p => p.id === id)) {
+                    renderArticle(id);
+                    return;
+                }
+            }
+
+            const section = HASH_SECTION[hash] || 'projects'; // 預設首頁 = 專案
+            renderSection(section);
+            document.title = `${SECTION_TITLE[section]} — ${BASE_TITLE}`;
         }
 
         // Render Posts List
@@ -736,12 +832,20 @@
 
         // Open Full Article View
         function openArticle(postId) {
+            if (!postsData.some(p => p.id === postId)) return;
+            const hash = '#post-' + postId;
+            if (location.hash === hash) renderArticle(postId);
+            else location.hash = hash; // 會觸發 hashchange → handleRoute
+        }
+
+        function renderArticle(postId) {
             const post = postsData.find(p => p.id === postId);
             if (!post) return;
 
             currentPostId = postId;
 
-            showSection('article');
+            renderSection('article');
+            document.title = `${post.title} — ${BASE_TITLE}`;
 
             document.getElementById('article-title').innerText = post.title;
             document.getElementById('article-date').innerText = post.date;
@@ -855,25 +959,63 @@
             `).join('');
         }
 
-        // Render Projects
+        // Render Projects (with preview screenshots)
+        // 預覽圖順序：
+        //   1. 自己嘅圖  images/<名稱>.jpg   （<名稱> = 專案網址最後一段，見下方；或用 p.image 手動指定）
+        //   2. 搵唔到 → thum.io 自動截取網頁畫面
+        //   3. 再失敗 → 紫色漸層 + 🎮 佔位
+        // 例：https://deardaddypig.github.io/throw/  → images/throw.jpg
+        function getProjectSlug(p) {
+            const parts = p.link.replace(/\/+$/, '').split('/');
+            return parts[parts.length - 1]; // 注意：GitHub Pages 檔名區分大小寫，例如 TicTacToe.jpg
+        }
+
+        function getProjectPreview(p) {
+            return p.image || `images/${getProjectSlug(p)}.jpg`;
+        }
+
+        function getProjectRemotePreview(p) {
+            return `https://image.thum.io/get/width/800/crop/500/noanimate/${p.link}`;
+        }
+
+        function projectImgFallback(img) {
+            if (img.dataset.step !== 'remote') {
+                img.dataset.step = 'remote';
+                img.src = img.dataset.remote;
+            } else {
+                img.style.display = 'none'; // 顯示底下嘅漸層佔位
+            }
+        }
+
         function renderProjects() {
             const container = document.getElementById('projects-container');
-            container.innerHTML = projectsData.map(p => `
-                <div class="glass-card p-6 rounded-3xl flex flex-col justify-between space-y-4">
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between">
-                            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">${p.title}</h3>
-                            <span class="text-xs font-mono text-slate-400"><i class="fa-regular fa-star text-amber-400 mr-1"></i>${p.stars}</span>
+            container.innerHTML = projectsData.map((p, idx) => `
+                <div class="glass-card rounded-3xl overflow-hidden flex flex-col group">
+                    <a href="${p.link}" target="_blank" rel="noopener" class="relative block aspect-[16/10] overflow-hidden bg-gradient-to-br from-purple-500/20 via-indigo-500/10 to-pink-500/20">
+                        <div class="absolute inset-0 flex items-center justify-center text-4xl opacity-60 select-none">🎮</div>
+                        <img src="${getProjectPreview(p)}" data-remote="${getProjectRemotePreview(p)}" alt="${p.title} 預覽圖" loading="${idx < 2 ? 'eager' : 'lazy'}"
+                             onerror="projectImgFallback(this)"
+                             class="relative w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-3">
+                            <span class="px-3 py-1 rounded-full bg-white/90 text-slate-900 text-xs font-medium">立即試玩 ▶</span>
                         </div>
-                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-2">
-                        <div class="flex items-center gap-1.5 flex-wrap">
-                            ${p.tech.map(t => `<span class="px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-[10px] font-mono">${t}</span>`).join('')}
+                    </a>
+                    <div class="p-5 flex flex-col justify-between space-y-4 flex-grow">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-2">
+                                <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">${p.title}</h3>
+                                <span class="text-xs font-mono text-slate-400 shrink-0"><i class="fa-regular fa-star text-amber-400 mr-1"></i>${p.stars}</span>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
                         </div>
-                        <a href="${p.link}" target="_blank" class="text-xs text-purple-500 hover:underline flex items-center gap-1">
-                            檢視 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                        </a>
+                        <div class="flex items-center justify-between pt-2">
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                ${p.tech.map(t => `<span class="px-2 py-0.5 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-300 text-[10px] font-mono">${t}</span>`).join('')}
+                            </div>
+                            <a href="${p.link}" target="_blank" rel="noopener" class="text-xs text-purple-500 hover:underline flex items-center gap-1 shrink-0 ml-2">
+                                檢視 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             `).join('');
@@ -940,13 +1082,37 @@
         }
 
         // Share Helpers
-        function shareArticle(type) {
+        async function copyToClipboard(text) {
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                }
+            } catch (e) { /* fallback below */ }
+            try {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.setAttribute('readonly', '');
+                ta.style.cssText = 'position:fixed;top:-1000px;opacity:0;';
+                document.body.appendChild(ta);
+                ta.select();
+                const ok = document.execCommand('copy');
+                document.body.removeChild(ta);
+                return ok;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        async function shareArticle(type) {
+            const url = location.href; // 已包含 #post-xxx，可直接分享該文章
             if (type === 'twitter') {
                 const title = encodeURIComponent(document.getElementById('article-title').innerText);
-                window.open(`https://twitter.com/intent/tweet?text=${title}`, '_blank');
-            } else {
-                showToast('連結已成功複製至剪貼簿！');
+                window.open(`https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(url)}`, '_blank');
+                return;
             }
+            const ok = await copyToClipboard(url);
+            showToast(ok ? '連結已成功複製至剪貼簿！' : '複製失敗，請手動複製網址列');
         }
 
         // Toast Notification System
