@@ -1,0 +1,29 @@
+# 阻擋 OpenAI (ChatGPT)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# 阻擋 Anthropic (Claude)
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# 阻擋 Perplexity AI
+User-agent: PerplexityBot
+Disallow: /
+
+# 阻擋 Google Gemini / Google Extended AI 爬蟲
+User-agent: Google-Extended
+Disallow: /
+
+# 阻擋 Common Crawl (大型 AI 訓練數據集來源)
+User-agent: CCBot
+Disallow: /
+
+# 阻擋所有爬蟲抓取
+User-agent: *
+Disallow: /
