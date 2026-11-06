@@ -552,7 +552,82 @@
     <!-- App Logic Script -->
     <script>
         // Article Sample Data with Rich Formatting
-        const postsData = [
+const postsData = [
+            {
+                id: 'code-and-coffee',
+                title: '手沖咖啡與程式碼：慢下來的藝術',
+                date: '2026-10-29',
+                category: '隨筆',
+                readTime: '2 MIN READ',
+                excerpt: '在講求極致效率與速食文化的時代，為什麼我們更需要給代碼與生活留白。',
+                applause: 35,
+                content: `
+                    <p>現代軟體開發總是在追趕 Deadline、Sprint 與 CI/CD 的極致速度。但正如手沖咖啡一樣，水溫過高會帶來苦澀，沖煮太快則會流於平淡。</p>
+
+                    <h2>1. 等待萃取的耐心</h2>
+                    <p>當你在面對一個極度複雜的 Bug 時，盲目地修改程式碼往往只會製造更多 Bug。這時，不妨學會像沖咖啡一樣，先停下來，靜觀其變。</p>
+
+                    <blockquote class="my-6">
+                        「最好的靈感，往往誕生於放空與慢下來的瞬間。」
+                    </blockquote>
+
+                    <h2>2. 儀式感帶來的心流</h2>
+                    <p>每天早上為自己手沖一杯咖啡，就如同在寫程式前先將架構圖理清楚。這種看似多餘的儀式感，實則是找回專注力的最佳錨點。</p>
+                `
+            },
+            {
+                id: 'mobile-first-mindset',
+                title: '流動的介面：重新思考行動裝置的體驗',
+                date: '2026-10-25',
+                category: '設計',
+                readTime: '2 MIN READ',
+                excerpt: '從桌面到手機螢幕，響應式設計不只是尺寸的縮放，更是資訊層次與互動邏輯的重構。',
+                applause: 19,
+                content: `
+                    <p>我們常常以為把網頁縮小就是行動化，事實上，使用者在手機上的心理模型與電腦前完全不同。手指的觸控範圍、注意力的碎片化，都決定了 UI 的設計邏輯。</p>
+
+                    <h2>1. 拇指熱區與互動直覺</h2>
+                    <p>在設計手機介面時，核心操作按鈕必須落在單手操作的「舒適區」。減少不必要的跳轉，讓體驗像呼吸一樣自然。</p>
+
+                    <p>在 CSS 中善用現代的彈性佈局，能讓排版在不同螢幕間無縫切換：</p>
+
+                    <div class="relative group my-4">
+                        <button onclick="copyCode(this)" class="absolute right-3 top-3 px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+                            <i class="fa-regular fa-copy"></i> 複製
+                        </button>
+                        <pre class="bg-slate-900 text-purple-300 p-4 rounded-2xl text-xs font-mono overflow-x-auto"><code>@media (max-width: 640px) {
+  .glass-panel {
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+}</code></pre>
+                    </div>
+
+                    <h2>2. 減法美學</h2>
+                    <p>手機螢幕有限，刪除那些非必要的裝飾，突顯內容本身，是行動優先時代的不二法門。</p>
+                `
+            },
+            {
+                id: 'dad-life-and-code',
+                title: '育兒日常：從孩子身上學到的程式架構',
+                date: '2026-10-22',
+                category: '隨筆',
+                readTime: '1 MIN READ',
+                excerpt: '小女兒突發奇想的童言童語，竟然意外啟發了我對模組化設計（Modular Design）的新理解。',
+                applause: 42,
+                content: `
+                    <p>陪著兩個寶貝女兒玩積木時，看著她們將毫無邏輯的組件拼湊成城堡，我突然意識到：最好的程式架構，其實就像小孩子的樂高，具備無限的組合可能與容錯空間。</p>
+
+                    <h2>童心的防呆設計</h2>
+                    <p>小朋友永遠會用你意想不到的方式去操作一個玩具（或是網頁元件）。這提醒了我們在寫前端互動時，防呆與例外處理（Error Handling）永遠比想像中更重要。</p>
+
+                    <blockquote>
+                        「保持好奇心，像孩子一樣去探索程式的邊界。」
+                    </blockquote>
+
+                    <p>生活與工程本是一體兩面，用心感受，處處皆是靈感。</p>
+                `
+            },
             {
                 id: 'aesthetic-restraint',
                 title: '極簡主義美學：當我們回味每一個像素',
@@ -643,26 +718,53 @@
 
         // Thoughts Data
         const thoughtsData = [
-            {
-                date: '2026-10-20 22:15',
-                content: '今晚在聽 Adele 的歌時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
-                tag: '靈感'
-            },
-            {
-                date: '2026-10-16 14:30',
-                content: '把網頁上的效果延遲調整了，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是靈魂所在。',
-                tag: 'UI'
-            },
-            {
-                date: '2026-09-25 09:10',
-                content: '清晨的空氣與安靜的街道是整理思路最好的導師。',
-                tag: '生活'
-            }
+{
+        date: '2026-10-31 23:45',
+        content: '想起小時候在電視前玩紅白機的時光。技術在變，但那份純粹的快樂一直沒變。',
+        tag: '遊戲'
+    },
+    {
+        date: '2026-10-27 16:20',
+        content: '最好的介面設計往往是「隱形」的。當使用者順暢完成操作卻沒意識到 UI 的存在時，就是設計師最大的成就感。',
+        tag: 'UI'
+    },
+    {
+        date: '2026-10-20 22:15',
+        content: '今晚在聽 Adele 的歌時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
+        tag: '靈感'
+    },
+    {
+        date: '2026-10-16 14:30',
+        content: '把網頁上的效果延遲調整了，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是靈魂所在。',
+        tag: 'UI'
+    },
+    {
+        date: '2026-10-12 08:30',
+        content: '陪小朋友堆積木時發現：程式跟積木本質上一模一樣——重點不是用了多少塊，而是夠不夠耐玩。',
+        tag: '靈感'
+    },
+    {
+        date: '2026-10-02 21:10',
+        content: '遇到瓶頸時，暫停一下充個電，答案反而會自動浮現。',
+        tag: '生活'
+    },
+    {
+        date: '2026-09-25 09:10',
+        content: '清晨的空氣與安靜的街道是整理思路最好的導師。',
+        tag: '生活'
+    }
         ];
 
         // Projects Data
         const projectsData = [
 
+          {
+                title: 'Pour a beer 倒杯好啤酒',
+                desc: 'Let's get a drink',
+                tech: ['beer', 'drink', 'game'],
+                stars: 0,
+                link: 'https://deardaddypig.github.io/beer/'
+            },
            {
                 title: 'Skee-Ball 滾球遊戲',
                 desc: '每局7個波，等你來累積最高分記錄',
@@ -671,14 +773,14 @@
                 link: 'https://deardaddypig.github.io/skeeball/'
             },
             {
-                title: '彈珠機',
+                title: 'Pinball 彈珠機',
                 desc: '大獎！可以儲齊七粒神珠',
                 tech: ['pinball', 'lucky', 'game'],
                 stars: 0,
                 link: 'https://deardaddypig.github.io/pinball/'
             },
             {
-                title: 'Tamagotchi / 他媽哥池',
+                title: 'Tamagotchi 他媽哥池',
                 desc: '寵物小雞',
                 tech: ['pet', 'Tamagotchi', 'game'],
                 stars: 7,
@@ -720,14 +822,21 @@
                 link: 'https://deardaddypig.github.io/2042/'
             },
             {
-                title: '過馬路 要小心',
+                title: 'Flappy',
+                desc: 'Tap to flap, dodge the pipes',
+                tech: ['fly', 'game'],
+                stars: 102,
+                link: 'https://deardaddypig.github.io/flappy/'
+            },
+            {
+                title: 'crossing the road 過馬路 要小心',
                 desc: '根據小孩上學時，遇上早上繁忙交通，及兒時經典 game 所設計。',
                 tech: ['traffic road', 'game'],
                 stars: 121,
                 link: 'https://deardaddypig.github.io/traffic/'
             },
             {
-                title: '釣魚物語',
+                title: 'Fishing 釣魚物語',
                 desc: '靈感來自細個玩的釣魚game，加上簡單輕量化商店模板。',
                 tech: ['fishing', 'game'],
                 stars: 89,
