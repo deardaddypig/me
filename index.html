@@ -467,7 +467,7 @@
         <!-- ================= ABOUT SECTION ================= -->
         <div id="view-about" class="hidden space-y-8">
             <header class="space-y-2">
-                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">關於我 (About)</h1>
+                <h1 class="text-3xl font-serif font-bold text-slate-900 dark:text-white">關於我 (About me)</h1>
                 <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">工程師的邏輯，一時一樣的情懷。</p>
             </header>
 
@@ -552,7 +552,8 @@
     <!-- App Logic Script -->
     <script>
         // Article Sample Data with Rich Formatting
-const postsData = [
+// 文章資料
+        const postsData = [
             {
                 id: 'code-and-coffee',
                 title: '手沖咖啡與程式碼：慢下來的藝術',
@@ -563,14 +564,9 @@ const postsData = [
                 applause: 35,
                 content: `
                     <p>現代軟體開發總是在追趕 Deadline、Sprint 與 CI/CD 的極致速度。但正如手沖咖啡一樣，水溫過高會帶來苦澀，沖煮太快則會流於平淡。</p>
-
                     <h2>1. 等待萃取的耐心</h2>
                     <p>當你在面對一個極度複雜的 Bug 時，盲目地修改程式碼往往只會製造更多 Bug。這時，不妨學會像沖咖啡一樣，先停下來，靜觀其變。</p>
-
-                    <blockquote class="my-6">
-                        「最好的靈感，往往誕生於放空與慢下來的瞬間。」
-                    </blockquote>
-
+                    <blockquote class="my-6">「最好的靈感，往往誕生於放空與慢下來的瞬間。」</blockquote>
                     <h2>2. 儀式感帶來的心流</h2>
                     <p>每天早上為自己手沖一杯咖啡，就如同在寫程式前先將架構圖理清楚。這種看似多餘的儀式感，實則是找回專注力的最佳錨點。</p>
                 `
@@ -585,12 +581,8 @@ const postsData = [
                 applause: 19,
                 content: `
                     <p>我們常常以為把網頁縮小就是行動化，事實上，使用者在手機上的心理模型與電腦前完全不同。手指的觸控範圍、注意力的碎片化，都決定了 UI 的設計邏輯。</p>
-
                     <h2>1. 拇指熱區與互動直覺</h2>
                     <p>在設計手機介面時，核心操作按鈕必須落在單手操作的「舒適區」。減少不必要的跳轉，讓體驗像呼吸一樣自然。</p>
-
-                    <p>在 CSS 中善用現代的彈性佈局，能讓排版在不同螢幕間無縫切換：</p>
-
                     <div class="relative group my-4">
                         <button onclick="copyCode(this)" class="absolute right-3 top-3 px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
                             <i class="fa-regular fa-copy"></i> 複製
@@ -602,7 +594,6 @@ const postsData = [
   }
 }</code></pre>
                     </div>
-
                     <h2>2. 減法美學</h2>
                     <p>手機螢幕有限，刪除那些非必要的裝飾，突顯內容本身，是行動優先時代的不二法門。</p>
                 `
@@ -617,14 +608,9 @@ const postsData = [
                 applause: 42,
                 content: `
                     <p>陪著兩個寶貝女兒玩積木時，看著她們將毫無邏輯的組件拼湊成城堡，我突然意識到：最好的程式架構，其實就像小孩子的樂高，具備無限的組合可能與容錯空間。</p>
-
                     <h2>童心的防呆設計</h2>
                     <p>小朋友永遠會用你意想不到的方式去操作一個玩具（或是網頁元件）。這提醒了我們在寫前端互動時，防呆與例外處理（Error Handling）永遠比想像中更重要。</p>
-
-                    <blockquote>
-                        「保持好奇心，像孩子一樣去探索程式的邊界。」
-                    </blockquote>
-
+                    <blockquote>「保持好奇心，像孩子一樣去探索程式的邊界。」</blockquote>
                     <p>生活與工程本是一體兩面，用心感受，處處皆是靈感。</p>
                 `
             },
@@ -638,19 +624,11 @@ const postsData = [
                 applause: 8,
                 content: `
                     <p>當我們回顧 2000 年代初期的網頁設計，往往充滿了滿溢的圖示、閃爍的霓虹動畫與繁複的邊框。然而，隨著視覺審美的成熟，我們意識到<strong>「簡約」並不等於「空洞」</strong>，而是一種極致的美學。</p>
-
                     <h2>1. 留白作為一種引導視線的聲音</h2>
                     <p>留白不是設計剩下來的殘渣，它是設計的主體。恰當的留白能夠賦予文字呼吸的能力，讀者在閱讀時保持專注與平靜。</p>
-
-                    <blockquote class="my-6">
-                        「設計不在於增加到不能再增加，而在於減少到不能再減少。」
-                    </blockquote>
-
+                    <blockquote class="my-6">「設計不在於增加到不能再增加，而在於減少到不能再減少。」</blockquote>
                     <h2>2. 微光與質感的細節堆疊</h2>
                     <p>現代極簡風格不再是冷冰冰的純白與純黑。透過微妙的模糊玻璃感、柔和的背景漸變，能夠在保持極簡的同時，賦予介面極高的視覺印象。</p>
-
-                    <p>下次試試在你的設計中加入以下陰影與模糊邏輯：</p>
-
                     <div class="relative group my-4">
                         <button onclick="copyCode(this)" class="absolute right-3 top-3 px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
                             <i class="fa-regular fa-copy"></i> 複製
@@ -662,7 +640,6 @@ const postsData = [
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }</code></pre>
                     </div>
-
                     <h2>3. 結語</h2>
                     <p>Delete 所有無意義的，讓文字與思想重回舞台中。這不僅是網頁設計的學問，也是數位生活的一種態度。</p>
                 `
@@ -677,10 +654,8 @@ const postsData = [
                 applause: 14,
                 content: `
                     <p>隨著瀏覽器效能的大幅躍進，過去許多依賴重型 JavaScript 框架才能實現的功能，如今都能以原生 Web API 完成。</p>
-
                     <h2>1. 原生特性的崛起</h2>
                     <p>原生 CSS 嵌套、API 的全面普及，使我們能以更少的 Code 實現更加流暢的頁面切換與排版。</p>
-
                     <div class="my-6 my-image-box">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
                              alt="Code on Monitor" 
@@ -688,7 +663,6 @@ const postsData = [
                              class="w-full rounded-2xl cursor-pointer hover:opacity-95 transition-opacity shadow-lg">
                         <span class="text-xs text-slate-400 mt-2 block text-center font-mono">圖：點擊圖片可放大預覽現代開發環境</span>
                     </div>
-
                     <h2>2. 無感載入與狀態管理簡化</h2>
                     <p>減少不必要的管理，善用 URL 狀態與瀏覽器快取，是保持輕量化的關鍵。</p>
                 `
@@ -703,69 +677,68 @@ const postsData = [
                 applause: 23,
                 content: `
                     <p>大腦就像我們的胃，你餵給它什麼資訊，它就會產出什麼樣的思考。底者應該嘗試切斷所有即時社群媒體的 notification。</p>
-
                     <h2>三個法則</h2>
                     <ul>
                         <li><strong>非同步溝通優先：</strong> 關閉非緊急通訊軟體的即時通知。</li>
                         <li><strong>Block & Batch：</strong> 每日集中兩次處理郵件與訊息，其餘時間全力投入工作（Deep Work）。</li>
                         <li><strong>紙筆思維：</strong> 複雜的架構設計先在筆記本上草稿。</li>
                     </ul>
-
                     <blockquote>專注力是這年代最稀缺的資源。一齊試試保護自己的注意力。</blockquote>
                 `
             }
         ];
 
-        // Thoughts Data
+        // 隨筆資料
         const thoughtsData = [
-{
-        date: '2026-10-31 23:45',
-        content: '想起小時候在電視前玩紅白機的時光。技術在變，但那份純粹的快樂一直沒變。',
-        tag: '遊戲'
-    },
-    {
-        date: '2026-10-27 16:20',
-        content: '最好的介面設計往往是「隱形」的。當使用者順暢完成操作卻沒意識到 UI 的存在時，就是設計師最大的成就感。',
-        tag: 'UI'
-    },
-    {
-        date: '2026-10-20 22:15',
-        content: '今晚在聽 Adele 的歌時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
-        tag: '靈感'
-    },
-    {
-        date: '2026-10-16 14:30',
-        content: '把網頁上的效果延遲調整了，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是靈魂所在。',
-        tag: 'UI'
-    },
-    {
-        date: '2026-10-12 08:30',
-        content: '陪小朋友堆積木時發現：程式跟積木本質上一模一樣——重點不是用了多少塊，而是夠不夠耐玩。',
-        tag: '靈感'
-    },
-    {
-        date: '2026-10-02 21:10',
-        content: '遇到瓶頸時，暫停一下充個電，答案反而會自動浮現。',
-        tag: '生活'
-    },
-    {
-        date: '2026-09-25 09:10',
-        content: '清晨的空氣與安靜的街道是整理思路最好的導師。',
-        tag: '生活'
-    }
+            {
+                date: '2026-10-31 23:45',
+                content: '想起小時候在電視前玩紅白機的時光。技術在變，但那份純粹的快樂一直沒變。',
+                tag: '遊戲'
+            },
+            {
+                date: '2026-10-27 16:20',
+                content: '最好的介面設計往往是「隱形」的。當使用者順暢完成操作卻沒意識到 UI 的存在時，就是設計師最大的成就感。',
+                tag: 'UI'
+            },
+            {
+                date: '2026-10-20 22:15',
+                content: '今晚在聽 Adele 的歌時突然想到：好的程式碼架構就像音樂的副歌，重複卻富有節奏感，每一次出現都帶來沉浸感。',
+                tag: '靈感'
+            },
+            {
+                date: '2026-10-16 14:30',
+                content: '把網頁上的效果延遲調整了，整體體驗立刻從「僵硬」變成了「絲滑」。細節真的是靈魂所在。',
+                tag: 'UI'
+            },
+            {
+                date: '2026-10-12 08:30',
+                content: '陪小朋友堆積木時發現：程式跟積木本質上一模一樣——重點不是用了多少塊，而是夠不夠耐玩。',
+                tag: '靈感'
+            },
+            {
+                date: '2026-10-02 21:10',
+                content: '遇到瓶頸時，暫停一下充個電，答案反而會自動浮現。',
+                tag: '生活'
+            },
+            {
+                date: '2026-09-25 09:10',
+                content: '清晨的空氣與安靜的街道是整理思路最好的導師。',
+                tag: '生活'
+            }
         ];
 
-        // Projects Data
+        // 專案資料（加上唯一 id 用於 CountAPI）
         const projectsData = [
-
-          {
+            {
+                id: 'proj_beer',
                 title: 'Pour a beer 倒杯好啤酒',
-                desc: 'Let's get a drink',
+                desc: "Let's get a drink",
                 tech: ['beer', 'drink', 'game'],
                 stars: 0,
                 link: 'https://deardaddypig.github.io/beer/'
             },
-           {
+            {
+                id: 'proj_skeeball',
                 title: 'Skee-Ball 滾球遊戲',
                 desc: '每局7個波，等你來累積最高分記錄',
                 tech: ['skeeball', 'sport', 'game'],
@@ -773,6 +746,7 @@ const postsData = [
                 link: 'https://deardaddypig.github.io/skeeball/'
             },
             {
+                id: 'proj_pinball',
                 title: 'Pinball 彈珠機',
                 desc: '大獎！可以儲齊七粒神珠',
                 tech: ['pinball', 'lucky', 'game'],
@@ -780,75 +754,83 @@ const postsData = [
                 link: 'https://deardaddypig.github.io/pinball/'
             },
             {
+                id: 'proj_pet',
                 title: 'Tamagotchi 他媽哥池',
                 desc: '寵物小雞',
                 tech: ['pet', 'Tamagotchi', 'game'],
-                stars: 7,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/pet/'
             },
             {
+                id: 'proj_throw',
                 title: 'Throw in the office',
                 desc: '記唔記得細個玩嘅貓狗大戰',
                 tech: ['office', 'thorw', 'game'],
-                stars: 11,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/throw/'
             },
-             {
+            {
+                id: 'proj_firefighter',
                 title: 'Modern Fire Rescue',
                 desc: '復古消防救火遊戲。(排行榜雲端同步 updating)',
                 tech: ['fire', 'firefighter', 'game'],
-                stars: 3,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/firefighter/'
             },
             {
+                id: 'proj_foodie',
                 title: 'Foodie Hunter',
                 desc: '第一次嘗試結合 Map 及GPS 功能的尋找美食程式。(完成度：??%)',
                 tech: ['foodie', 'map', 'game'],
-                stars: 16,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/foodie/'
             },
-             {
+            {
+                id: 'proj_tictactoe',
                 title: '井字過三關',
                 desc: '「唔駛講你都知係咩」',
                 tech: ['tictactoe', 'game'],
-                stars: 7,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/TicTacToe/'
             },
             {
+                id: 'proj_2042',
                 title: '2042',
                 desc: '專為飛機愛好者打造。(正研發 online 雙人合作 mode)',
                 tech: ['shooting', 'airplane', 'game'],
-                stars: 23,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/2042/'
             },
             {
+                id: 'proj_flappy',
                 title: 'Flappy',
                 desc: 'Tap to flap, dodge the pipes',
                 tech: ['fly', 'game'],
-                stars: 102,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/flappy/'
             },
             {
+                id: 'proj_traffic',
                 title: 'crossing the road 過馬路 要小心',
                 desc: '根據小孩上學時，遇上早上繁忙交通，及兒時經典 game 所設計。',
                 tech: ['traffic road', 'game'],
-                stars: 121,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/traffic/'
             },
             {
+                id: 'proj_fisherman',
                 title: 'Fishing 釣魚物語',
                 desc: '靈感來自細個玩的釣魚game，加上簡單輕量化商店模板。',
                 tech: ['fishing', 'game'],
-                stars: 89,
+                stars: 0,
                 link: 'https://deardaddypig.github.io/fisherman/'
             }
         ];
 
-        // Application State
+        const COUNTAPI_NAMESPACE = 'relaxshing_projects_stars_v1';
         let currentTagFilter = 'all';
         let currentPostId = null;
 
-        // Init App
         window.onload = function() {
             initTheme();
             renderPosts();
@@ -856,11 +838,9 @@ const postsData = [
             renderProjects();
             setupReadingProgress();
 
-            // Hash routing：載入時依網址顯示，之後跟住上一頁/下一頁
             handleRoute();
             window.addEventListener('hashchange', handleRoute);
 
-            // Keyboard Shortcuts (Cmd+K)
             window.addEventListener('keydown', (e) => {
                 if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
                     e.preventDefault();
@@ -873,7 +853,6 @@ const postsData = [
             });
         };
 
-        // Theme Switcher Logic
         function initTheme() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -896,7 +875,6 @@ const postsData = [
             icon.className = isDark ? 'fa-solid fa-sun text-amber-400 text-sm' : 'fa-solid fa-moon text-slate-500 text-sm';
         }
 
-        // SPA Navigation Manager
         function renderSection(sectionId) {
             const sections = ['home', 'article', 'thoughts', 'projects', 'about'];
             sections.forEach(s => {
@@ -904,7 +882,6 @@ const postsData = [
                 if (el) el.classList.add('hidden');
             });
 
-            // Update Nav Active State
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('text-slate-900', 'dark:text-white', 'font-semibold', 'bg-slate-200/60', 'dark:bg-slate-800/60');
                 btn.classList.add('text-slate-500', 'dark:text-slate-400');
@@ -918,11 +895,9 @@ const postsData = [
                 }
             });
 
-            // Show selected view
             const targetView = document.getElementById(`view-${sectionId}`);
             if (targetView) targetView.classList.remove('hidden');
 
-            // Hide/Show progress bar depending on view
             const progressContainer = document.getElementById('reading-progress-container');
             if (sectionId === 'article') {
                 progressContainer.classList.remove('opacity-0');
@@ -933,8 +908,6 @@ const postsData = [
             scrollToTop();
         }
 
-        // ===== Hash Router =====
-        // #projects  #articles  #thoughts  #about  #post-<文章id>
         const SECTION_HASH = { home: 'articles', projects: 'projects', thoughts: 'thoughts', about: 'about' };
         const HASH_SECTION = { articles: 'home', projects: 'projects', thoughts: 'thoughts', about: 'about' };
         const SECTION_TITLE = { home: '文章', projects: '專案', thoughts: '微光隨筆', about: '關於' };
@@ -946,7 +919,7 @@ const postsData = [
                 renderSection(sectionId);
                 document.title = `${SECTION_TITLE[sectionId]} — ${BASE_TITLE}`;
             } else {
-                location.hash = hash; // 會觸發 hashchange → handleRoute
+                location.hash = hash;
             }
         }
 
@@ -961,12 +934,11 @@ const postsData = [
                 }
             }
 
-            const section = HASH_SECTION[hash] || 'projects'; // 預設首頁 = 專案
+            const section = HASH_SECTION[hash] || 'projects';
             renderSection(section);
             document.title = `${SECTION_TITLE[section]} — ${BASE_TITLE}`;
         }
 
-        // Render Posts List
         function renderPosts() {
             const container = document.getElementById('posts-container');
             const filtered = postsData.filter(p => currentTagFilter === 'all' || p.category === currentTagFilter);
@@ -998,7 +970,6 @@ const postsData = [
             `).join('');
         }
 
-        // Tag Filtering
         function setTagFilter(tag) {
             currentTagFilter = tag;
             document.querySelectorAll('.tag-btn').forEach(btn => {
@@ -1011,12 +982,11 @@ const postsData = [
             renderPosts();
         }
 
-        // Open Full Article View
         function openArticle(postId) {
             if (!postsData.some(p => p.id === postId)) return;
             const hash = '#post-' + postId;
             if (location.hash === hash) renderArticle(postId);
-            else location.hash = hash; // 會觸發 hashchange → handleRoute
+            else location.hash = hash;
         }
 
         function renderArticle(postId) {
@@ -1039,7 +1009,6 @@ const postsData = [
             scrollToTop();
         }
 
-        // Generate Table of Contents (TOC)
         function generateTOC() {
             const tocContainer = document.getElementById('article-toc');
             const headers = document.querySelectorAll('#article-content h2');
@@ -1063,7 +1032,6 @@ const postsData = [
             }).join('');
         }
 
-        // Smooth Scroll Helper
         function smoothScrollTo(id) {
             const target = document.getElementById(id);
             if (target) {
@@ -1071,7 +1039,6 @@ const postsData = [
             }
         }
 
-        // Particle Fireworks Applause Button
         function triggerApplause(event) {
             if (!currentPostId) return;
             const post = postsData.find(p => p.id === currentPostId);
@@ -1080,7 +1047,6 @@ const postsData = [
                 document.getElementById('applause-count').innerText = post.applause;
             }
 
-            // Create Confetti Particles
             const btn = event.currentTarget;
             const rect = btn.getBoundingClientRect();
             for (let i = 0; i < 12; i++) {
@@ -1106,7 +1072,6 @@ const postsData = [
             showToast('感謝你的讚賞與鼓勵！👏');
         }
 
-        // Copy Code Snippet
         function copyCode(btn) {
             const codeBlock = btn.nextElementSibling.querySelector('code');
             if (codeBlock) {
@@ -1124,7 +1089,6 @@ const postsData = [
             }
         }
 
-        // Render Thoughts / Micro Posts
         function renderThoughts() {
             const container = document.getElementById('thoughts-container');
             container.innerHTML = thoughtsData.map(t => `
@@ -1140,15 +1104,9 @@ const postsData = [
             `).join('');
         }
 
-        // Render Projects (with preview screenshots)
-        // 預覽圖順序：
-        //   1. 自己嘅圖  images/<名稱>.jpg   （<名稱> = 專案網址最後一段，見下方；或用 p.image 手動指定）
-        //   2. 搵唔到 → thum.io 自動截取網頁畫面
-        //   3. 再失敗 → 紫色漸層 + 🎮 佔位
-        // 例：https://deardaddypig.github.io/throw/  → images/throw.jpg
         function getProjectSlug(p) {
             const parts = p.link.replace(/\/+$/, '').split('/');
-            return parts[parts.length - 1]; // 注意：GitHub Pages 檔名區分大小寫，例如 TicTacToe.jpg
+            return parts[parts.length - 1];
         }
 
         function getProjectPreview(p) {
@@ -1164,10 +1122,11 @@ const postsData = [
                 img.dataset.step = 'remote';
                 img.src = img.dataset.remote;
             } else {
-                img.style.display = 'none'; // 顯示底下嘅漸層佔位
+                img.style.display = 'none';
             }
         }
 
+        // 渲染專案卡片，右側星星改為可點擊的真實按鈕
         function renderProjects() {
             const container = document.getElementById('projects-container');
             container.innerHTML = projectsData.map((p, idx) => `
@@ -1185,7 +1144,10 @@ const postsData = [
                         <div class="space-y-2">
                             <div class="flex items-center justify-between gap-2">
                                 <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-white">${p.title}</h3>
-                                <span class="text-xs font-mono text-slate-400 shrink-0"><i class="fa-regular fa-star text-amber-400 mr-1"></i>${p.stars}</span>
+                                <button onclick="addProjectStar(event, '${p.id}')" title="點擊俾星" class="text-xs font-mono text-slate-400 hover:text-amber-400 shrink-0 flex items-center gap-1 px-2 py-1 rounded-full hover:bg-amber-400/10 transition-all active:scale-125">
+                                    <i class="fa-solid fa-star text-amber-400"></i>
+                                    <span id="star-count-${p.id}">...</span>
+                                </button>
                             </div>
                             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${p.desc}</p>
                         </div>
@@ -1200,9 +1162,48 @@ const postsData = [
                     </div>
                 </div>
             `).join('');
+
+            fetchProjectStars();
         }
 
-        // Reading Progress Bar Logic
+        // 從雲端讀取星星數
+        async function fetchProjectStars() {
+            projectsData.forEach(async (p) => {
+                try {
+                    const res = await fetch(`https://api.countapi.xyz/get/${COUNTAPI_NAMESPACE}/${p.id}`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        const el = document.getElementById(`star-count-${p.id}`);
+                        if (el && data.value !== undefined) {
+                            el.innerText = data.value;
+                        }
+                    }
+                } catch (e) {
+                    const el = document.getElementById(`star-count-${p.id}`);
+                    if (el) el.innerText = '0';
+                }
+            });
+        }
+
+        // 點擊星星手動 +1 累加
+        async function addProjectStar(e, projectId) {
+            e.preventDefault();
+            e.stopPropagation();
+            try {
+                const res = await fetch(`https://api.countapi.xyz/hit/${COUNTAPI_NAMESPACE}/${projectId}`);
+                if (res.ok) {
+                    const data = await res.json();
+                    const el = document.getElementById(`star-count-${projectId}`);
+                    if (el && data.value !== undefined) {
+                        el.innerText = data.value;
+                    }
+                    showToast('多謝你俾星支持！⭐️');
+                }
+            } catch (err) {
+                showToast('網路連線失敗，請稍後再試');
+            }
+        }
+
         function setupReadingProgress() {
             window.addEventListener('scroll', () => {
                 const articleView = document.getElementById('view-article');
@@ -1214,7 +1215,6 @@ const postsData = [
             });
         }
 
-        // Command-K Modal Spotlight Search
         function openSearchModal() {
             const modal = document.getElementById('search-modal');
             modal.classList.remove('hidden');
@@ -1252,7 +1252,6 @@ const postsData = [
             `).join('');
         }
 
-        // Lightbox Image Preview
         function openLightbox(src) {
             document.getElementById('lightbox-img').src = src;
             document.getElementById('lightbox-modal').classList.remove('hidden');
@@ -1262,14 +1261,13 @@ const postsData = [
             document.getElementById('lightbox-modal').classList.add('hidden');
         }
 
-        // Share Helpers
         async function copyToClipboard(text) {
             try {
                 if (navigator.clipboard && window.isSecureContext) {
                     await navigator.clipboard.writeText(text);
                     return true;
                 }
-            } catch (e) { /* fallback below */ }
+            } catch (e) { }
             try {
                 const ta = document.createElement('textarea');
                 ta.value = text;
@@ -1278,7 +1276,7 @@ const postsData = [
                 document.body.appendChild(ta);
                 ta.select();
                 const ok = document.execCommand('copy');
-                document.body.removeChild(ta);
+                document.body.removeChild(dummy);
                 return ok;
             } catch (e) {
                 return false;
@@ -1286,7 +1284,7 @@ const postsData = [
         }
 
         async function shareArticle(type) {
-            const url = location.href; // 已包含 #post-xxx，可直接分享該文章
+            const url = location.href;
             if (type === 'twitter') {
                 const title = encodeURIComponent(document.getElementById('article-title').innerText);
                 window.open(`https://twitter.com/intent/tweet?text=${title}&url=${encodeURIComponent(url)}`, '_blank');
@@ -1296,7 +1294,6 @@ const postsData = [
             showToast(ok ? '連結已成功複製至剪貼簿！' : '複製失敗，請手動複製網址列');
         }
 
-        // Toast Notification System
         function showToast(msg) {
             const toast = document.getElementById('toast');
             document.getElementById('toast-message').innerText = msg;
