@@ -550,9 +550,8 @@
     </div>
 
     <!-- App Logic Script -->
+<!-- App Logic Script -->
     <script>
-        // Article Sample Data with Rich Formatting
-// 文章資料
         const postsData = [
             {
                 id: 'code-and-coffee',
@@ -688,7 +687,6 @@
             }
         ];
 
-        // 隨筆資料
         const thoughtsData = [
             {
                 date: '2026-10-31 23:45',
@@ -727,12 +725,11 @@
             }
         ];
 
-        // 專案資料（加上唯一 id 用於 CountAPI）
         const projectsData = [
             {
                 id: 'proj_beer',
                 title: 'Pour a beer 倒杯好啤酒',
-                desc: "Lets get a drink",
+                desc: "Let's get a drink",
                 tech: ['beer', 'drink', 'game'],
                 stars: 0,
                 link: 'https://deardaddypig.github.io/beer/'
@@ -827,7 +824,6 @@
             }
         ];
 
-        const COUNTAPI_NAMESPACE = 'relaxshing_projects_stars_v1';
         let currentTagFilter = 'all';
         let currentPostId = null;
 
@@ -1126,7 +1122,6 @@
             }
         }
 
-        // 渲染專案卡片，右側星星改為可點擊的真實按鈕
         function renderProjects() {
             const container = document.getElementById('projects-container');
             container.innerHTML = projectsData.map((p, idx) => `
@@ -1166,17 +1161,20 @@
             fetchProjectStars();
         }
 
-        // 從雲端讀取星星數
+        // 使用穩定替代的計數 API
         async function fetchProjectStars() {
             projectsData.forEach(async (p) => {
                 try {
-                    const res = await fetch(`https://api.countapi.xyz/get/${COUNTAPI_NAMESPACE}/${p.id}`);
+                    const res = await fetch(`https://countapi.mileshilliard.com/api/v1/get/${p.id}`);
                     if (res.ok) {
                         const data = await res.json();
                         const el = document.getElementById(`star-count-${p.id}`);
                         if (el && data.value !== undefined) {
                             el.innerText = data.value;
                         }
+                    } else {
+                        const el = document.getElementById(`star-count-${p.id}`);
+                        if (el) el.innerText = '0';
                     }
                 } catch (e) {
                     const el = document.getElementById(`star-count-${p.id}`);
@@ -1185,12 +1183,11 @@
             });
         }
 
-        // 點擊星星手動 +1 累加
         async function addProjectStar(e, projectId) {
             e.preventDefault();
             e.stopPropagation();
             try {
-                const res = await fetch(`https://api.countapi.xyz/hit/${COUNTAPI_NAMESPACE}/${projectId}`);
+                const res = await fetch(`https://countapi.mileshilliard.com/api/v1/hit/${projectId}`);
                 if (res.ok) {
                     const data = await res.json();
                     const el = document.getElementById(`star-count-${projectId}`);
@@ -1198,6 +1195,8 @@
                         el.innerText = data.value;
                     }
                     showToast('多謝你俾星支持！⭐️');
+                } else {
+                    showToast('網路連線失敗，請稍後再試');
                 }
             } catch (err) {
                 showToast('網路連線失敗，請稍後再試');
@@ -1276,7 +1275,7 @@
                 document.body.appendChild(ta);
                 ta.select();
                 const ok = document.execCommand('copy');
-                document.body.removeChild(dummy);
+                document.body.removeChild(ta);
                 return ok;
             } catch (e) {
                 return false;
